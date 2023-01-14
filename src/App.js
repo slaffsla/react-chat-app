@@ -1,10 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Auth } from "./components/Auth";
+import { signOut } from "firebase/auth";
+import { auth } from "./firebase-config";
 
 import { useState, useRef } from "react";
 import Cookies from "universal-cookie";
 import { Chat } from "./components/Chat";
+
 const cookies = new Cookies();
 function App() {
   const [userAuthorized, setUserAuthorized] = useState(
@@ -14,13 +17,20 @@ function App() {
 
   const roomInputRef = useRef(null);
 
+  const signUserOut = async () => {
+    await signOut(auth);
+    cookies.remove("auth-token");
+    setUserAuthorized(false);
+    setRoom(null);
+  };
+
   if (userAuthorized) {
     return (
-      <div>
+      <div className="App-header">
         {room ? (
           <Chat room={room} />
         ) : (
-          <div className="room">
+          <div className="auth">
             <label>Enter Room Name</label>
             <input ref={roomInputRef} />
             <button onClick={() => setRoom(roomInputRef.current.value)}>
@@ -28,6 +38,11 @@ function App() {
             </button>
           </div>
         )}
+        <div className="auth">
+          <button id="signout_btn" onClick={signUserOut}>
+            Sign Out
+          </button>
+        </div>
       </div>
     );
   }
