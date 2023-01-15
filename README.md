@@ -1,3 +1,12 @@
+A chat app made with React and Firebase. Users can enter any room, which they must name first.
+
+Live example:
+https://cool-chat-app-ddee0.web.app/
+
+
+https://user-images.githubusercontent.com/7899896/212502652-7b8cff29-0a26-483a-b482-92aba67cbd84.mov
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
