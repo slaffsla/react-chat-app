@@ -1,6 +1,7 @@
-A chat app made with React and Firebase. Users can enter any room, which they must name first.
+A chat app made with React and Firebase. Users can enter a room, which they must name first.
 
 Live example:
+
 https://cool-chat-app-ddee0.web.app/
 
 
