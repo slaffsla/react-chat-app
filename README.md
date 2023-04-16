@@ -3,6 +3,7 @@ A chat app made with React and Firebase. Users can enter a room, which they must
 Live example:
 
 https://cool-chat-app-ddee0.web.app/
+![chat_app](https://user-images.githubusercontent.com/7899896/232321722-ac3ea299-68a0-4fb5-8aff-b0d6e5961b35.png)
 
 
 https://user-images.githubusercontent.com/7899896/212502652-7b8cff29-0a26-483a-b482-92aba67cbd84.mov
